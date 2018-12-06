@@ -1,0 +1,15 @@
+Create 16MB filesystem file
+
+$dd if=/dev/zero of=testfsfile  bs=1M  count=16
+
+
+Mount:
+
+src/sfs /home/u/testfsfile example/mountdir
+
+
+Unmount:
+
+fusermount -u example/mountdir
+
+
