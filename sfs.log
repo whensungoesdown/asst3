@@ -1,0 +1,36 @@
+
+sfs_init()
+
+ uty: test
+    conn:
+    proto_major = 7
+    proto_minor = 26
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    context:
+    fuse = 00be1510
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 00be1010
+    logfile = 00be1070
+    diskfile = /home/u/assignment3/testfsfile
+    umask = 00000
+uty: recognized file system, a3fs
+
+sfs_getattr(path="/", statbuf=0x022ddc60)
+
+sfs_opendir(path="/", fi=0x022ddc80)
+
+sfs_getattr(path="/1.txt", statbuf=0x022ddc90)
+
+sfs_getattr(path="/2.txt", statbuf=0x02adec90)
+
+sfs_getattr(path="/3.txt", statbuf=0x022ddc90)
+
+sfs_getattr(path="/", statbuf=0x02adec60)
+
+sfs_destroy(userdata=0x00be1010)
